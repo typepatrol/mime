@@ -54,6 +54,9 @@
     "pretest": "npm run build || true",
     "prepublishOnly": "npm test",
     "test": "c8 node --test && ./test/exports_test.sh",
+    "test:no-clean": "c8 --no-clean node --test && ./test/exports_test.sh",
+    "test:report": "c8 report --reporter=text --reporter=lcov",
+    "test:clean": "rm -rf coverage .nyc_output",
     "test:watch": "clear && c8 node --enable-source-maps --test --watch test"
   },
   "keywords": [
